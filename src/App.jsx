@@ -1,24 +1,41 @@
 import React, {useState} from "react";
+import UserNum from "./UserNum";
 
 export default function App(){
 
     const [name, setName] = useState();
 
-    function handleSub(){
+    function handleSub(e){
         const inp = document.getElementById("username");
         setName(inp.value);
-        // console.log(name);
+        e.preventDefault(); // prevents from getting reloaded
     }
     
     
     return(
+        // <div className="papaDiv">
+        //     <div className="container">
+        //         <h1 className="question"> What's Your Name? </h1>
+        //         <form className="takeInput" onSubmit={handleSub}>
+        //             <input autoFocus type="text" id="username"/>
+        //         </form>
+        //         {/* {console.log(name)} STATES FOR NAME IS WORKING */}
+        //     </div>
+        // </div>
+
         <div className="papaDiv">
-            <h1 className="question"> What's Your Name? </h1>
-            <form className="takeInput" onSubmit={handleSub}>
-                <input autoFocus type="text" id="username"/>
-            </form>
-            {/* {console.log(name)} STATES FOR NAME IS WORKING*/}
-        </div>
+            {
+            name? <UserNum name={name} /> : 
+                    <div className="container"> 
+                        <h1 className="question"> What's Your Name? </h1>
+                        <form className="takeInput" onSubmit={handleSub}>
+                            <input autoFocus type="text" id="username"/>
+                        </form>
+                        {/* {console.log(name)} STATES FOR NAME IS WORKING */}
+                    </div>
+            
+            }
+    </div>
 
     )
 }
