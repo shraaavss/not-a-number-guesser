@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import UserNum from "./UserNum";
+import ThinkDoing from "./Thinking";
+
 
 export default function App(){
 
