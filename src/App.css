@@ -1,0 +1,11 @@
+.papaDiv {
+    font-size: 12px;
+    color: blueviolet;
+    padding: 5px;
+    border: 2px solid;
+    border-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
