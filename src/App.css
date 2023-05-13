@@ -38,3 +38,18 @@ input {
 input:focus{
     outline: none;
 }
+
+.veryThink{
+    font-size: large;
+}
+
+.brainrot {
+    color: black;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    padding: 25px;
+    /* text-decoration: underline; */
+    /* text-decoration-thickness: 4px; */
+    /* text-underline-offset: 4px; */
+}

@@ -8,18 +8,20 @@ export default function UserNum(props){
     function numEnt(p){
         const inpNum = document.getElementById("numberEntered");
         setNum(inpNum.value);
+        // {console.log("heeelloooo");}
         p.preventDefault();
     }
 
     return(
 
     <div className="papaDiv"> 
-        {num? <ThinkDoing name={props.name}/> : 
+        {num? <ThinkDoing name={props.name} numba={num}/> : 
                     <div className="container">
                         <h1 className="question"> Enter a number {`${props.name}`} :)</h1>
                         <form className="takeInput" onSubmit={numEnt}>
                             <input autoFocus type="text" id="numberEntered"/>
                         </form>
+                        
                     </div>
         }
     </div>
