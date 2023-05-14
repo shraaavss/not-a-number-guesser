@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 // import App from "./App";
 import UserNum from "./UserNum";
 
+
 export default function ThinkDoing(props){
 
     var brain = ["Connecting to the database...", "Collecting required data...", "Looking into the stars...", "Mining the Earth...", "Catching the brain waves...",
@@ -11,8 +12,6 @@ export default function ThinkDoing(props){
     const randomElement2 = brain[Math.floor(Math.random() * brain.length)];
     const randomElement3 = brain[Math.floor(Math.random() * brain.length)];
 
-
-    // const [ShowBrain, SetShowBrain] = useState(false);
     const [BrainContent, SetBrainContent] = useState("Hmm, let me see what I can do...");
 
     useEffect(()=> {
@@ -30,17 +29,14 @@ export default function ThinkDoing(props){
         }, 6000);
 
         setTimeout(() => {
-            SetBrainContent(randomElement);
+            SetBrainContent(<span>The number you're thinking of is: {props.numba}</span>);     
         }, 8000);
 
     }, []);
 
     return(
         <div className="container">
-
             <div className="brainrot">{BrainContent}</div>
-            
-
         </div>
     )
 }

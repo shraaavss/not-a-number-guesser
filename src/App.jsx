@@ -15,16 +15,6 @@ export default function App(){
     
     
     return(
-        // <div className="papaDiv">
-        //     <div className="container">
-        //         <h1 className="question"> What's Your Name? </h1>
-        //         <form className="takeInput" onSubmit={handleSub}>
-        //             <input autoFocus type="text" id="username"/>
-        //         </form>
-        //         {/* {console.log(name)} STATES FOR NAME IS WORKING */}
-        //     </div>
-        // </div>
-
         <div className="papaDiv">
             {
             name? <UserNum name={name} /> : 
@@ -33,7 +23,6 @@ export default function App(){
                         <form className="takeInput" onSubmit={handleSub}>
                             <input autoFocus type="text" id="username"/>
                         </form>
-                        {/* {console.log(name)} STATES FOR NAME IS WORKING */}
                     </div>
             
             }

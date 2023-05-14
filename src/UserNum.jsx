@@ -8,7 +8,6 @@ export default function UserNum(props){
     function numEnt(p){
         const inpNum = document.getElementById("numberEntered");
         setNum(inpNum.value);
-        // {console.log("heeelloooo");}
         p.preventDefault();
     }
 
